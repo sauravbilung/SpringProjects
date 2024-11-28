@@ -2,12 +2,14 @@ package com.springprojects.restcrud.controller;
 
 import com.springprojects.restcrud.entity.Employee;
 import com.springprojects.restcrud.service.EmployeeService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api")
+@Tag(name = "Employee APIs", description = "fetch, add, update and delete employee information")
 public class EmployeeRestController {
 
     private EmployeeService employeeService;
