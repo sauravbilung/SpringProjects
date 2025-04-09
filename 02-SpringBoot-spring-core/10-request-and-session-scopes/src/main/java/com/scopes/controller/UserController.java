@@ -25,6 +25,7 @@ public class UserController {
     @GetMapping("/")
     public String showLoginPage(Model model) {
         // Add empty user object to the model for form binding
+        // This object is named "user" and will be available to Thymeleaf as ${user} in login.html.
         model.addAttribute("user", new User());
         // Returning "login" tells Spring to render login.html using Thymeleaf view resolver
         return "login";
